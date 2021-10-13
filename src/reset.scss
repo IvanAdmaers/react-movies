@@ -105,13 +105,14 @@ section {
 
 * {
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html,
 body {
     height: 100%;
     font-family: 'Balsamiq Sans', cursive;
-    background: #444B54;
+    background: #292D32;
 }
 
 ol,

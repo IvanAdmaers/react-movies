@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 
 import "./header.scss";
 
 const Header = () => {
+  const headerRef = useRef();
+
+  useEffect(() => {
+    const stickyHeader = () => {
+      if (document.documentElement.scrollTop > 100) {
+        headerRef.current.classList.add("header--sticky");
+      } else {
+        headerRef.current.classList.remove("header--sticky");
+      }
+    };
+    window.addEventListener("scroll", stickyHeader);
+
+    return () => window.removeEventListener("scroll", stickyHeader);
+  }, []);
+
   return (
-    <header className="header">
+    <header className="header" ref={headerRef}>
       <div className="header-inner">
         <div className="header__logo">
           <svg
