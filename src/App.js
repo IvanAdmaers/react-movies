@@ -21,10 +21,10 @@ function App() {
     <>
       <Header />
       <Switch>
-        <Route path="" exact>
+        <Route path="/react-movies" exact>
           <Home getId={getId} />
         </Route>
-        <Route path="detail/:id" exact>
+        <Route path="/react-movies/detail/:id" exact>
           <Detail movieId={movieId} />
         </Route>
       </Switch>
