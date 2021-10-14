@@ -13,8 +13,9 @@
     margin-bottom: 15px;
 }
 
-.movie-list__item {
-    width: 100%;
+.movie-list__content {
+    max-width: 265px;
+    cursor: pointer;
 }
 
 .movie-list__content-img {

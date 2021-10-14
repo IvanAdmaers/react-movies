@@ -31,12 +31,20 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+
+    &:hover {
+
+        .header__logo-title {
+            color: #E44F4F;
+        }
+    }
 }
 
 .header__logo-title {
     font-size: 30px;
     font-weight: 700;
     margin-left: 10px;
+    transition: 0.5s;
 }
 
 .nav__list {
