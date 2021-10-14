@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <header className="header" ref={headerRef}>
       <div className="header-inner">
-        <Link to="/react-movies">
+        <Link to="">
           <div className="header__logo">
             <svg
               width="60"
