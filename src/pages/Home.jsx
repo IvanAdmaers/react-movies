@@ -5,7 +5,7 @@ import MovieList from "../components/Movie-list/MovieList";
 
 import axios from "axios";
 
-const Home = ({getId}) => {
+const Home = ({ getId }) => {
   const [popularMovies, setPopularMovies] = useState([]);
   const [topRatedMovies, setTopRatedMovies] = useState([]);
   const [popularTv, setPopularTv] = useState([]);
@@ -35,13 +35,35 @@ const Home = ({getId}) => {
   }, []);
 
   return (
-    <main className="main">
-      <Slider />
-      <MovieList moviesList={popularMovies} title={"Популярные фильмы"} category={'movie'} getId={getId} />
-      <MovieList moviesList={topRatedMovies} title={"Лучшие фильмы"} category={'movie'} getId={getId} />
-      <MovieList moviesList={popularTv} title={"Популярные сериалы"} category={'tv'} getId={getId} />
-      <MovieList moviesList={topRatedTv} title={"Лучшие сериалы"} category={'tv'} getId={getId} />
-    </main>
+    <>
+      <section className="section section-slider">
+        <Slider />
+      </section>
+      <MovieList
+        moviesList={popularMovies}
+        title={"Популярные фильмы"}
+        category={"movie"}
+        getId={getId}
+      />
+      <MovieList
+        moviesList={topRatedMovies}
+        title={"Лучшие фильмы"}
+        category={"movie"}
+        getId={getId}
+      />
+      <MovieList
+        moviesList={popularTv}
+        title={"Популярные сериалы"}
+        category={"tv"}
+        getId={getId}
+      />
+      <MovieList
+        moviesList={topRatedTv}
+        title={"Лучшие сериалы"}
+        category={"tv"}
+        getId={getId}
+      />
+    </>
   );
 };
 

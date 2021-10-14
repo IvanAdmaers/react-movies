@@ -19,7 +19,7 @@ const MovieList = ({ moviesList, title, getId, category }) => {
                 key={movie.id}
                 onClick={() => getId(movie.id, category)}
               >
-                <Link to={`detail/${movie.id}`}>
+                <Link to={`/detail/${movie.id}`}>
                   <div className="movie-list__content">
                     <div
                       className={`movie-list__content-img ${

@@ -6,6 +6,7 @@ import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
 
 import "./reset.scss";
+import "./media.scss";
 
 ReactDOM.render(
   <React.StrictMode>

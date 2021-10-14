@@ -20,14 +20,16 @@ function App() {
   return (
     <>
       <Header />
-      <Switch>
-        <Route path="" exact>
-          <Home getId={getId} />
-        </Route>
-        <Route path="detail/:id" exact>
-          <Detail movieId={movieId} />
-        </Route>
-      </Switch>
+      <main className="main">
+        <Switch>
+          <Route path="/" exact>
+            <Home getId={getId} />
+          </Route>
+          <Route path="/detail/:id" exact>
+            <Detail movieId={movieId} />
+          </Route>
+        </Switch>
+      </main>
     </>
   );
 }
