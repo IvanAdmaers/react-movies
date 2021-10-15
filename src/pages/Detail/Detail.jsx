@@ -36,7 +36,7 @@ const Detail = ({ movieId, getId }) => {
       setMovieSimilar(movieSimilarRes.data);
     };
     getMovieInfo();
-  }, []);
+  }, [movieId]);
 
   return (
     <>
