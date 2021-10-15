@@ -115,3 +115,43 @@
     font-size: 22px;
     text-align: center;
 }
+
+.person__text {
+    width: 200px;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.trailer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+.trailer__video {
+    margin-top: 15px;
+    border-radius: 20px;
+}
+
+.trailer__title {
+    font-size: 30px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.similar {
+    padding: 15px;
+
+    .swiper-slide {
+        width: 20%;
+    }
+}
+
+.similar__item-img {
+
+    img {
+        border-radius: 20px;
+    }
+}

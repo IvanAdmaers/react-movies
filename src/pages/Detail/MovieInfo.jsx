@@ -19,15 +19,23 @@ const MovieInfo = ({ movieInfo }) => {
         </div>
         <div className="detail-content">
           <h1 className="detail__title">{movieInfo.title || movieInfo.name}</h1>
-          <div className="detail__list-genres">
-            {movieInfo.genres.map((item) => (
-              <p className="detail__list-genre" key={item.id}>
-                {" "}
-                {item.name}{" "}
-              </p>
-            ))}
-          </div>
-          <p className="detail__overview">Описание: {movieInfo.overview}</p>
+          {movieInfo.genres.length > 0 ? (
+            <div className="detail__list-genres">
+              {movieInfo.genres.map((item) => (
+                <p className="detail__list-genre" key={item.id}>
+                  {" "}
+                  {item.name}{" "}
+                </p>
+              ))}
+            </div>
+          ) : (
+            ""
+          )}
+          {movieInfo.overview.length > 0 ? (
+            <p className="detail__overview">Описание: {movieInfo.overview}</p>
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </section>

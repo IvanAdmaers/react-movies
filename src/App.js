@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import Home from "./pages/Home";
 import Header from "./components/Header/Header";
@@ -25,8 +25,8 @@ function App() {
           <Route path="/" exact>
             <Home getId={getId} />
           </Route>
-          <Route path="/detail/:id" exact>
-            <Detail movieId={movieId} />
+          <Route path="/detail/:id">
+            <Detail getId={getId} movieId={movieId} />
           </Route>
         </Switch>
       </main>
