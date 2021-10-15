@@ -1,9 +1,15 @@
 import React from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const MovieSimilar = ({ movieSimilar, getId, category }) => {
+  const { pathname } = useLocation();
+
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [pathname]);
+
   return (
     <>
       {movieSimilar.length > 0 ? (
